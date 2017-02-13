@@ -8,18 +8,18 @@ from email.header import Header
 from email.utils import parseaddr, formataddr
 # 输入Email地址和口令:
 from_addr = "1048393815@qq.com"
-password = "mudczbxwzbjabcfj"
+password = "*********"
 # 输入SMTP服务器地址:
 smtp_server = "smtp.qq.com"
 # 输入收件人地址:
-to_addr = "793319382@qq.com"
+to_addr = "*******@qq.com"
 now_time = time.strftime('%H:%M:%S',time.localtime(time.time()))
-msg = MIMEText('老孔，起床了！现在时间%s' % now_time,'plain', 'utf-8')
+msg = MIMEText('起床了！现在时间%s' % now_time,'plain', 'utf-8')
 
 
 msg['From'] = Header('1048393815@qq.com')
 msg['To'] = Header('793319382@qq.com')
-msg['Subject'] = Header(u'来自唐豆豆的问候', 'utf-8')
+msg['Subject'] = Header(u'来自唐*的问候', 'utf-8')
 
 try:
     server = smtplib.SMTP_SSL(smtp_server, 465) # SMTP_SSL协议默认端口是465
